@@ -4,11 +4,26 @@ using System.Text;
 
 namespace FizzBuzz
 {
-    class FizzBuzz
+    public class FizzBuzz
     {
         public string Get(int num)
         {
-            return "1";
+            if (IsMultipleOf3(num))
+            {
+                return "Fizz";
+            }
+            if (num == 5)
+            {
+                return "Buzz";
+            }
+            return num.ToString();
         }
+
+        private bool IsMultipleOf3(int numberToCheck)
+        {
+            return numberToCheck % 3 == 0;
+        }
+
+
     }
 }
