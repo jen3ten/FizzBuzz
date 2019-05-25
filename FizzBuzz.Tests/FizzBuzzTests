@@ -14,6 +14,7 @@ namespace FizzBuzz.Tests
 
             Assert.Equal("1", result);
         }
+
         [Fact]
         public void Get_Returns_2_for_2()
         {
@@ -23,6 +24,7 @@ namespace FizzBuzz.Tests
  
              Assert.Equal("2", result);
         }
+
         [Fact]
         public void Get_Returns_Fizz_for_3()
         {
@@ -32,6 +34,7 @@ namespace FizzBuzz.Tests
  
              Assert.Equal("Fizz", result);
         }
+
         [Fact]
         public void Get_Returns_Buzz_for_5()
         {
@@ -41,6 +44,7 @@ namespace FizzBuzz.Tests
  
              Assert.Equal("Buzz", result);
         }
+
         [Fact]
         public void Get_Returns_Buzz_for_10()
         {
@@ -50,7 +54,8 @@ namespace FizzBuzz.Tests
  
              Assert.Equal("Buzz", result);
         }
-    [Fact]
+
+		[Fact]
         public void Get_Returns_Fizz_for_6()
         {
             var fizzBuzz = new FizzBuzz();
@@ -59,12 +64,21 @@ namespace FizzBuzz.Tests
  
             Assert.Equal("Fizz", result);
         }
-	[Fact]
+
+		[Fact]
 		public void Get_Returns_Fizz_Buzz_for_15()
 		{
 			var fizzBuzz = new FizzBuzz();
 			var result = fizzBuzz.Get(15);
-			Assert.Equal("Fizz Buzz", result);
+			Assert.Equal("FizzBuzz", result);
+		}
+
+		[Fact]
+		public void Get_Returns_FizzBuzz_for_30()
+		{
+			var fizzBuzz = new FizzBuzz();
+			var result = fizzBuzz.Get(30);
+			Assert.Equal("FizzBuzz", result);
 		}
     }
 }
