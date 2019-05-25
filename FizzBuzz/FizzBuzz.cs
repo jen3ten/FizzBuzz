@@ -12,7 +12,7 @@ namespace FizzBuzz
             {
                 return "Fizz";
             }
-            if (num == 5)
+            if (IsMultipleOf5(num))
             {
                 return "Buzz";
             }
@@ -23,7 +23,10 @@ namespace FizzBuzz
         {
             return numberToCheck % 3 == 0;
         }
-
+        private bool IsMultipleOf5(int numberTocheck)
+        {
+            return numberTocheck % 5 == 0;
+        }
 
     }
 }

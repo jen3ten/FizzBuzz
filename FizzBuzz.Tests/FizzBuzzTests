@@ -50,5 +50,21 @@ namespace FizzBuzz.Tests
  
              Assert.Equal("Buzz", result);
         }
+    [Fact]
+        public void Get_Returns_Fizz_for_6()
+        {
+            var fizzBuzz = new FizzBuzz();
+ 
+            var result = fizzBuzz.Get(6);
+ 
+            Assert.Equal("Fizz", result);
+        }
+	[Fact]
+		public void Get_Returns_Fizz_Buzz_for_15()
+		{
+			var fizzBuzz = new FizzBuzz();
+			var result = fizzBuzz.Get(15);
+			Assert.Equal("Fizz Buzz", result);
+		}
     }
 }
